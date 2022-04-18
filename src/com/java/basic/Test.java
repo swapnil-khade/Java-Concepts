@@ -15,7 +15,7 @@ public class Test {
 	
 	public void display1() {
 		System.out.println("Inside display1");
-		System.out.println("Inside display1");
+
 		
 	}
 	
