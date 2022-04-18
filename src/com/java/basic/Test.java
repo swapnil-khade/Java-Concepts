@@ -8,9 +8,16 @@ public class Test {
 
 	}
 	
+	public void display() {
+		
+	}
 
 	
 	public void display1() {
+		
+	}
+	
+	public void display2() {
 		
 	}
 
