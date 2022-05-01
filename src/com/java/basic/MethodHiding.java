@@ -14,7 +14,7 @@ class ChildMethodClass extends BaseMethodClass {
     public static void printMessage() {
         System.out.println("child static method");
     }
-    void printMessage1() {
+    void printMessage1() {											// cannot reduce visibility of method using access modifier 
     	super.printMessage1();
     	System.out.println("child instance method------------");
     	super.printMessage1();
@@ -23,10 +23,10 @@ class ChildMethodClass extends BaseMethodClass {
 public class MethodHiding{
 	public static void main(String args[]) {
 		BaseMethodClass b = new ChildMethodClass();
-		ChildMethodClass c= new ChildMethodClass();
-		c.printMessage();
-		b.printMessage();
-		//b.printMessage1();
+		//ChildMethodClass c= new ChildMethodClass();
+		//c.printMessage();
+		//b.printMessage();
+		b.printMessage1();
 		
 	}  
 }  
