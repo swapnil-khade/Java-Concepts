@@ -7,6 +7,10 @@ import java.io.*;
 //can be saved in a file.
 class Atemp implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1404582311429218667L;			//generated serial version UID
 	int i;
 	String s;
 

@@ -71,8 +71,8 @@ public class StreamAPI {
 					//.map(f)											// map takes object of Function 
 				    
 					.filter(p)   // filter(t->t.id>3) 					// filter takes object of Predicate which returns boolean
-				    
-				    .map(f)      // map(t->t.price+500)
+				    .filter(t->t.name.equals("Macbook"))
+				    //.map(f)      // map(t->t.price+500)
 				    .forEach(i->System.out.println(i));					// forEach takes object of Consumer
 		
 	}

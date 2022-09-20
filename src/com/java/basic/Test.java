@@ -12,8 +12,20 @@ public class Test {
 			System.out.println();
 		}
 		
+		
+		System.out.println(recursion(5));
 
 	}
+	static int recursion (int i){
+
+		if(i==0)
+		{
+		return 1;
+		}
+
+		return i*recursion(i-1);
+
+		}
 	
 	public void display() {
 		try {
