@@ -8,7 +8,7 @@ public class ForEachMethod {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 		List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9);
 		
 		for (Integer integer : list) {								//enhanced for loop
@@ -31,7 +31,8 @@ public class ForEachMethod {
 		};
 		list.forEach(c);
 		
+		Boolean b = Boolean.parseBoolean("TRUE");
+		System.out.println(b);
+		
 	}
-	
-	
 }
