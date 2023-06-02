@@ -13,8 +13,24 @@ public class Test {
 		}
 		
 		
-		System.out.println(recursion(5));
+		//System.out.println(recursion(5));
+		System.out.println(disp1());
 
+	}
+	
+	static int disp1() {
+		
+		try {
+			System.out.println("Before finally");
+			//System.exit(0);
+			return 1111;
+			
+		}catch(Exception e) {
+			
+		}finally {
+			System.out.println("In finally");
+		}
+		return 2222;
 	}
 	static int recursion (int i){
 
