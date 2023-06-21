@@ -1,5 +1,9 @@
 package com.java.basic;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.json.*;
 
 public class JsonStringToJsonObject {
@@ -24,6 +28,15 @@ public class JsonStringToJsonObject {
 		
 		System.out.println(j.getJSONArray("errors").getJSONObject(0).get("message"));
 
+		String s = "1, -2,3,4,5";
+		s = s.replaceAll("\\s", "");
+		List<String> myList = new ArrayList<String>(Arrays.asList(s.split(",")));
+		List<Long> l = new ArrayList<Long>();
+		
+		for(String s1 : myList) {
+			l.add(Long.valueOf(s1));
+		}
+		System.out.println(l);
 	}
 
 }

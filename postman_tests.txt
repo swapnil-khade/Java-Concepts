@@ -1,0 +1,16 @@
+var jsonObject = xml2Json(responseBody);
+
+var asac_token = jsonObject['soapenv:Envelope']['soapenv:Body']['CSGetTokenResponse']['eBayAuthToken']; // works in Postman Windows App
+
+//var tokenData = $(responseBody).find("ebayauthtoken")[0]; // works in Postman Chrome App
+//console.log(tokenData);
+
+//var asac_token = tokenData.innerText;
+//console.log(asac_token);
+
+postman.setGlobalVariable("ASAC_TOKEN", asac_token);
+
+
+/////******/////
+
+pm.globals.set("oauth_token", pm.response.json()['access_token']);

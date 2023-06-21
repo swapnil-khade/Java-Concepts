@@ -3,6 +3,7 @@ package com.java.collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 public class HashMapImpl {
@@ -50,6 +51,17 @@ public class HashMapImpl {
 		for (Map.Entry<Student, String> entry : values) {
 			System.out.println(entry.getKey()+" : "+entry.getValue());
 		}
+		
+		System.out.println("----------------------ConcurrentHashMap------------------------");
+		
+		Map<Integer, String> cmap = new ConcurrentHashMap<Integer, String>();			// null key or value not allowed
+		
+		cmap.put(1, "Swapnil");
+		cmap.put(2, "Maya");
+		cmap.put(3, "Arav");															
+		
+		System.out.println(cmap);
+		
 
 	}
 
