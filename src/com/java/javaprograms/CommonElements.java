@@ -30,10 +30,10 @@ public class CommonElements {
 			}
 		});
 		
-//		map.forEach((i,j) -> {
-//			if(map.containsValue(3))
-//				System.out.println(i+" ");
-//		});
+		map.forEach((i,j) -> {
+			if(j == 3)
+				System.out.println(i+" ");
+		});
 		
 		ArrayList<Integer> commonElements = new ArrayList<>();
 		for (int ele : map.keySet()) {
