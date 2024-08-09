@@ -61,6 +61,12 @@ public class HashMapImpl {
 		cmap.put(3, "Arav");															
 		
 		System.out.println(cmap);
+		System.out.println("*****************");
+		
+		Map <Integer, Integer > map = Map.of(1,1,2,2,3,3);
+		
+		Map <Integer , Integer > map1 = Map.ofEntries(Map.entry(1, 2),Map.entry(3, 2),Map.entry(2, 2));
+		map1.forEach((k,v) -> System.out.println(k + " : " + v));
 		
 
 	}
