@@ -1,12 +1,18 @@
 package com.java.basic;
 
 abstract class Demo{
+	int x;
 	
 	public Demo(int x) {
 		System.out.println("In Demo constructor.");
+		this.x = x;
 	}
 	
 	public abstract void display();
+	
+	public void show() {
+		System.out.println(x);
+	}
 }
 
 class DemoImpl extends Demo{
@@ -31,6 +37,7 @@ public class AbstractClass {
 		
 		Demo obj = new DemoImpl();
 		obj.display();
+		obj.show();
 	}
 
 }
