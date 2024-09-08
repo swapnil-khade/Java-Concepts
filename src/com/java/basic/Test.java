@@ -1,8 +1,27 @@
 package com.java.basic;
 
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 public class Test {
 
 	public static void main(String[] args) {
+		
+		
+		
+		
+		String str = "Interview";
+
+		Map<Character, Long> map = str.chars()
+										.mapToObj(c -> (char) c)
+										.map(c -> Character.toLowerCase(c))
+										.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		map.forEach((k,v) -> System.out.println(k+" : " + v));
+		
+		
+		System.exit(0);
 		int a=1;
 		for(int i=1; i<=4;i++) {
 			for(int j=1;j<=i;j++) {

@@ -2,7 +2,9 @@ package com.java.java8basics;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
@@ -23,12 +25,7 @@ public class StreamAPI {
 	
 	public static void main(String[] args) {
 		
-		studentList.add(new Student("Maya",    Arrays.asList("1111","2222")));
-		if(!studentList.isEmpty()) {
-			System.out.println(studentList);
-		}
-		
-		System.exit(0);
+
 
 		boolean add = productList.add(new Product(1, "HP", 35499));
 		productList.add(new Product(2, "Sony", 25000));
@@ -40,8 +37,27 @@ public class StreamAPI {
 		productList.add(new Product(7, null, 85000));	
 		
 		studentList.add(new Student("Maya",    Arrays.asList("1111","2222")));
+		studentList.add(new Student("Maya",    Arrays.asList("1111","2222")));
+		studentList.add(new Student("Maya",    Arrays.asList("1111","2222")));
 		studentList.add(new Student("Swapnil", Arrays.asList("3333","4444")));
 		studentList.add(new Student("Arav",    Arrays.asList("5555","6666")));
+		
+		Map<String, Long> collect3 = studentList.stream()
+					.map(mapper -> mapper.getName().get())
+					.collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		List<Product> collect4 = productList.stream()
+					.sorted((o1,o2) -> o2.getPrice()-o1.getPrice())
+					.collect(Collectors.toList());
+		
+		List<Integer> collect5 = productList.stream()
+					.map(mapper -> mapper.getPrice())
+					.sorted(Comparator.reverseOrder())
+					.collect(Collectors.toList());
+		
+		System.out.println(collect5);
+		
+		System.exit(0);
 		
 		Stream<Product> productStream = productList.stream();			// create stream
 		Stream<Product> productStream1 = productList.parallelStream();			// create stream
