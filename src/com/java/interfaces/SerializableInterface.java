@@ -1,6 +1,6 @@
 package com.java.interfaces;
 
-import java.io.*;
+import java.io.* ;
 
 //By implementing Serializable interface
 //we make sure that state of instances of class A

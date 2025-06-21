@@ -15,6 +15,10 @@ public sealed class SealedClass extends Shape permits Circle{					// must be fin
 
 }
 
-final class Circle extends  SealedClass {
+non-sealed class Circle extends  SealedClass {
+	
+}
+
+class avc extends Circle {
 	
 }

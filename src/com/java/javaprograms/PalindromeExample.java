@@ -1,4 +1,4 @@
-package com.java.javaprograms;
+ package com.java.javaprograms;
 
 public class PalindromeExample {
 
