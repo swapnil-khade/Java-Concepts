@@ -1,0 +1,108 @@
+SELECT CustomerName, City FROM Customers;
+
+SELECT DISTINCT Country FROM Customers;
+
+SELECT * FROM Customers WHERE Country='Mexico';
+
+SELECT * FROM Products ORDER BY Price DESC;
+
+SELECT *
+FROM Customers
+WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+
+SELECT * FROM Customers WHERE NOT Country = 'Spain';
+
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+SELECT * FROM Customers LIMIT 3;
+
+SELECT MAX(Price) FROM Products;
+
+SELECT COUNT(*) FROM Products;
+
+SELECT * FROM Customers WHERE Country IN ('Germany', 'France', 'UK');
+
+SELECT * FROM Products WHERE Price BETWEEN 10 AND 20;
+
+SELECT ProductID, ProductName, CategoryName																	inner join
+FROM Products
+INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID;
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City									self join
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City 
+ORDER BY A.City;
+
+SELECT City FROM Customers											UNION selects only distinct values.
+UNION																 Use UNION ALL to also select duplicate values!
+SELECT City FROM Suppliers
+ORDER BY City;
+
+SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers
+ORDER BY City;
+
+
+The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
+
+
+SELECT COUNT(CustomerID), Country									
+FROM Customers
+GROUP BY Country;
+
+The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5
+ORDER BY COUNT(CustomerID) DESC;
+
+
+The following SQL statement creates a backup copy of Customers:
+
+SELECT * INTO CustomersBackup2017 FROM Customers;
+SELECT * INTO CustomersBackup2017 IN 'Backup.mdb' FROM Customers;
+
+SELECT * INTO CustomersGermany											copies only the German customers into a new table
+FROM Customers
+WHERE Country = 'Germany';
+
+
+
+SELECT DISTINCT salary FROM employees									nth highest salary
+ORDER BY salary DESC
+LIMIT 2, 1;
+
+what is indexing?
+
+how to optimize query?
+-use indexing
+-avoid select *
+-de normalization
+-avoid nested query
+-Apply WHERE clauses as early
+-

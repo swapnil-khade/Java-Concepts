@@ -1,0 +1,65 @@
+Java:
+OOPs concepts
+this,super,static
+final,finally,finalize
+abstract class / interface
+String / Builder / Buffer
+Exception Handling
+Multithreading
+Java 8/17 features
+Collection Framework
+Copy constructor / chaining / object cloning
+Immutable class
+Serialization / Externalization
+Object Class
+Design Pattern
+Cloneable / Serializable / Marker interface
+Consumer / Function / Predicate / Biconsumer
+Comparable / Comparator
+coding programs : streams / arrays / sql queries
+
+Spring Boot:
+Bean lifecycle / scope
+DI / autowire modes
+Constructor ambiguities
+transaction managament
+
+
+Spring AOP:
+
+
+Hibernate:
+states / caching
+mapping / criteria
+hibernate inheritance
+
+Microservices:
+
+
+Apache Kafka:
+
+
+Interview Questions:
+RestController / Controller
+Spring annotations / customized annotation
+concurrent Modification Exception
+hashmap vs hashtable vs concurentHashmap
+Status codes
+@Bean / component / qualifier / primary
+@valid / validated / pattern / email
+@value / async
+disable autoconfiguration
+HTTP servlet request
+put vs patch
+internal working of Hashmap
+checked / unchecked Exception
+java -jar fileName.jar
+serial version UID
+transient / volatile
+Date API / how to sort date
+sequential stream / parallel stream
+SOLID principles
+Actuators / profile
+RestTemplate / WebClient
+map / flatMap
+config multiple database
