@@ -1,0 +1,31 @@
+
+Netflix Eureka naming server
+	-service regisration
+	-service discovery
+	
+
+spring-cloud-starter-netflix-eureka-client
+	-Spring Cloud Load Balancer 
+
+	
+Feign clients
+	
+	
+Spring Cloud Gateway 			common features like logging, security, analytics
+	
+	
+Fault tolerance library
+Resilience4j as circuit breaker framework
+	
+	
+	
+	
+Docker 
+
+Zipkin distributed tracing server
+	
+(metrics, logs, traces)
+Micrometer -> OpenTelemetry -> Zipkin
+
+assign ID to request across  multiple component 
+

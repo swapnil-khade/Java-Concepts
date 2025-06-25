@@ -1,0 +1,30 @@
+
+
+Limits-Service
+	spring-boot-starter-web
+	spring-boot-starter-actuator
+	spring-boot-devtools
+	spring-cloud-starter-config					[to connect to spring cloud config server]
+
+	spring.application.name=limits-service
+	spring.config.import=optional:configserver:http://localhost:8888	
+
+	
+spring cloud config server
+	spring-cloud-config-server
+	spring-boot-devtools						[central management for configuration via git]
+	
+	spring.application.name=spring-cloud-config-server
+	server.port=8888
+	spring.cloud.config.server.git.uri=file:///D:/Softwares/eclipse/Swapnil/git-localconfig-repo
+	
+	
+	
+Git repo [ git-localconfig-repo ]
+	(limits-service.properties)
+		limits-service.minimum=4
+		limits-service.maximum=996
+		
+	(limits-service-dev.properties)
+		limits-service.minimum=5
+		limits-service.maximum=995
