@@ -34,7 +34,8 @@ mapping / criteria
 hibernate inheritance
 
 Microservices:
-
+For public end points, how to make sure only authorized entries are accepted?
+What steps are required to call other service end point?
 
 Apache Kafka:
 
